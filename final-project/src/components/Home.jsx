@@ -1,11 +1,12 @@
 import React from 'react';
+import Home from './Home.scss'
 
-function Home() {
+const Home = () => {
     return (
         <div className="home">
-            <img src="logo.png" alt="Logo" className="logo" />
-            <div className="gallery-name">Nazwa Galerii</div>
-            <img src="start-image.jpg" alt="Gallery" className="start-image" />
+
+            <img src="" alt="Gallery" className="start-image" />
+            <h1>Gallery</h1>
         </div>
     );
 }
