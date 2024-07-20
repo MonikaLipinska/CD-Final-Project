@@ -1,7 +1,7 @@
 // import {useEffect, useState} from 'react';
 import {BrowserRouter as Router, Navigate, Outlet, Route, Routes} from 'react-router-dom';
 import Middleware from "@/components/Middleware.jsx";
-import Homepage from '@/components/Homepage.jsx';
+import Homepage from '@/components/HomePage.jsx';
 
 // import About from './components/About.jsx';
 // import Browse from './components/Browse.jsx';

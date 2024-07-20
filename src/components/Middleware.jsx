@@ -6,7 +6,9 @@ const Middleware = () => {
     if(!isLoggedIn) {
         return <Navigate to='/login'/>;
     }
+
     return <Outlet/>;
+    {/* return <Navigate to="/homepage" /> */}
 }
 
 
