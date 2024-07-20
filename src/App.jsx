@@ -1,5 +1,5 @@
 // import {useEffect, useState} from 'react';
-import {BrowserRouter as Router, Navigate, Outlet, Route, Routes} from 'react-router-dom';
+import {BrowserRouter as Router, Outlet, Route, Routes} from 'react-router-dom';
 import Middleware from "@/components/Middleware.jsx";
 import Homepage from '@/components/HomePage.jsx';
 
@@ -12,14 +12,13 @@ import Homepage from '@/components/HomePage.jsx';
 // import { supabase } from './supabase.js';
 
 
+// czy jestes zalogowany
+// if (true) {
+//     return <Navigate to="/login" />
+// }
 
-    // czy jestes zalogowany
-    // if (true) {
-    //     return <Navigate to="/login" />
-    // }
 
-
-function App () {
+function App() {
     // const [isLoggedIn, setIsLoggedIn] = useState(false);
     // const [showLogin, setShowLogin] = useState(true);
     //
@@ -39,20 +38,30 @@ function App () {
     //     setShowLogin(false);
     // };
 
+    const Layout = () => {
+        return (
+            <>
+                <header>HEADER</header>
+                <Outlet/>
+            </>
+        )
+    }
 
 
     return (
         <Router>
             <Routes>
-                <Route path="/login" element={<h1>Hello login page</h1>} />
+                <Route path="/login" element={<h1>Hello login page</h1>}/>
                 {/*<Route path="/signup" />*/}
-                <Route path="/" element={<Middleware />}>
-                    <Route index element={<Homepage />} />
-                    {/*<Route path="/about" element={<About />} />*/
-                    /*                /!*<Route path="/browse" element={<Browse />} />*!/*/
-                    /*                /!*<Route path="/contact" element={<Contact />} />*!/*/
-                    /*                /!*<Route path="/help" element={<Help />} />*!/*/
-                <Route>
+                <Route path="/" element={<Middleware/>}>
+                    <Route element={<Layout/>}>
+                        <Route index element={<Homepage/>}/>
+                        <Route path="/about" element={<h1>About</h1>}/>
+                        {/*                /!*<Route path="/browse" element={<Browse />} />*!/*/}
+                        {/*                /!*<Route path="/contact" element={<Contact />} />*!/*/}
+                        { /*                /!*<Route path="/help" element={<Help />} />*!/*/}
+                    </Route>
+                </Route>
 
             </Routes>
             {/*<div className="App">*/}
@@ -83,44 +92,38 @@ function App () {
 export default App;
 
 
-
-
-
-                    {/*
-
-/*import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-
-function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
-*/
-
-*/}
+// /*
+//
+// /*import { useState } from 'react'
+// import reactLogo from './assets/react.svg'
+// import viteLogo from '/vite.svg'
+// import './App.css'
+//
+// function App() {
+//   const [count, setCount] = useState(0)
+//
+//   return (
+//     <>
+//       <div>
+//         <a href="https://vitejs.dev" target="_blank">
+//           <img src={viteLogo} className="logo" alt="Vite logo" />
+//         </a>
+//         <a href="https://react.dev" target="_blank">
+//           <img src={reactLogo} className="logo react" alt="React logo" />
+//         </a>
+//       </div>
+//       <h1>Vite + React</h1>
+//       <div className="card">
+//         <button onClick={() => setCount((count) => count + 1)}>
+//           count is {count}
+//         </button>
+//         <p>
+//           Edit <code>src/App.jsx</code> and save to test HMR
+//         </p>
+//       </div>
+//       <p className="read-the-docs">
+//         Click on the Vite and React logos to learn more
+//       </p>
+//     </>
+//   )
+// }
