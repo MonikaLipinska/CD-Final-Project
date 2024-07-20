@@ -1,0 +1,99 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: "Courier New", sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background: #333;
+  color: white;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logoImage {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+}
+
+.logoText {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+.nav .navList {
+  display: flex;
+}
+.nav .navItem {
+  margin-left: 20px;
+  color: white;
+  text-decoration: none;
+  padding: 5px 10px;
+  transition: background-color 0.3s;
+}
+.nav .navItem:hover {
+  background-color: #575757;
+  border-radius: 5px;
+}
+
+.section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f4f4f4;
+  padding: 2rem;
+}
+
+.logoImage2 {
+  max-width: 100%;
+  height: auto;
+}
+
+.footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+}
+
+.footer p {
+  margin: 0;
+}
+
+/*.home {
+  img  {
+    height: auto;
+    width: 100%;
+  }
+
+  h1 {
+    position: absolute;
+    top: 50%;
+left: 50%;
+    color: white;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    padding: 20px;
+  }
+}
+*/
+
+/*# sourceMappingURL=Homepage.css.map */
