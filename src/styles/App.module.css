@@ -1,6 +1,10 @@
+body {
+  margin: 0;
+}
+
 .App {
   font-family: "Courier New", sans-serif;
   text-align: center;
 }
 
-/*# sourceMappingURL=App.css.map */
+/*# sourceMappingURL=App.module.css.map */

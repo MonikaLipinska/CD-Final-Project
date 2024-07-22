@@ -5,9 +5,9 @@
   font-family: "Courier New", sans-serif;
 }
 
-.homepage {
+//.homepage {}
 
-}
+
 
 .header {
   display: flex;
@@ -16,6 +16,9 @@
   background: #333;
   color: white;
   align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+font-family: "Courier New",sans-serif;
 }
 
 .logo {
@@ -64,16 +67,27 @@
   }
 }
 
-
+.hamburger {
+  display: none;
+  font-size: 2em;
+  cursor: pointer;
+  color: red;
+  width: 15px;
+  height: 15px;
+}
 
 
 .section {
+  box-sizing: border-box;
   flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #f4f4f4;
+  width: 100%;
   padding: 2rem;
+
+
 }
 
 .logoImage2 {
@@ -87,17 +101,41 @@
   color: #fff;
   text-align: center;
   padding: 1rem;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .footer p {
   margin: 0;
 }
 
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .nav {
+    display: none;
+    width: 100%;
 
+    &.navOpen {
+      display: block;
+    }
 
+   ul {
+    flex-direction: column;
+     padding: 0;
+  }
 
-
-
+    .navItem {
+      margin: 10px 0;
+      text-align: center;
+    }
+  }
+}
+.hamburger {
+  display: block;
+}
 
 
 

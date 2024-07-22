@@ -1,12 +1,12 @@
 // import {useEffect, useState} from 'react';
-import {BrowserRouter as Router, Outlet, Route, Routes} from 'react-router-dom';
+import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import Middleware from "@/components/Middleware.jsx";
-import Homepage from '@/components/HomePage.jsx';
-
-// import About from './components/About.jsx';
-// import Browse from './components/Browse.jsx';
-// import Contact from './components/Contact.jsx';
-// import Help from './components/Help.jsx';
+import HomePage from '@/components/HomePage.jsx';
+import HeaderLayout from "@/components/HeaderLayout.jsx"
+//import {Outlet} from "react-router-dom";
+import Browse from '@/components/Browse.jsx';
+import About from "@/components/About.jsx";
+import Contact from '@/components/Contact.jsx';
 // import Login from './components/Login.jsx';
 // import SignUp from "./components/SignUp.jsx";
 // import { supabase } from './supabase.js';
@@ -38,14 +38,7 @@ function App() {
     //     setShowLogin(false);
     // };
 
-    const Layout = () => {
-        return (
-            <>
-                <header>HEADER</header>
-                <Outlet/>
-            </>
-        )
-    }
+    // const HeaderLayout = () => {
 
 
     return (
@@ -54,11 +47,11 @@ function App() {
                 <Route path="/login" element={<h1>Hello login page</h1>}/>
                 {/*<Route path="/signup" />*/}
                 <Route path="/" element={<Middleware/>}>
-                    <Route element={<Layout/>}>
-                        <Route index element={<Homepage/>}/>
-                        <Route path="/about" element={<h1>About</h1>}/>
-                        {/*                /!*<Route path="/browse" element={<Browse />} />*!/*/}
-                        {/*                /!*<Route path="/contact" element={<Contact />} />*!/*/}
+                    <Route element={<HeaderLayout/>}>
+                        <Route index element={<HomePage/>}/>
+                        <Route path="/about" element={<About/>}/>
+                        <Route path="/browse" element={<Browse/>}/>
+                        <Route path="/contact" element={<Contact/>}/>
                         { /*                /!*<Route path="/help" element={<Help />} />*!/*/}
                     </Route>
                 </Route>
@@ -127,3 +120,29 @@ export default App;
 //     </>
 //   )
 // }
+//return (
+//  <>
+//    <header className={styles.header}>
+//      <div className={styles.logo}>
+//        <img src={obrazek6} alt="Art Gallery Logo" className={styles.logoImage}/>
+//      <span className={styles.logoText}>Gallery name</span>
+//</div>
+//<nav className={styles.nav}>
+//  <ul className={styles.navList}>
+//    <li><a href="#" className={styles.navItem}>Home</a></li>
+//  <li>
+//    <NavLink to="/about" className={styles.navItem}>About</NavLink>
+//  {/*<a href="#" className={styles.navItem}>About</a>*/}
+//</li>
+// <li><a href="#" className={styles.navItem}>Browse</a></li>
+//<li><a href="#" className={styles.navItem}>Contact</a></li>
+//<li><a href="#" className={styles.navItem}>Help</a></li>
+//</ul>
+// </nav>
+//</header>
+
+//<Outlet/>
+// </>
+//)
+//}
+//

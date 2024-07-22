@@ -1,0 +1,92 @@
+
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background: #333;
+  color: white;
+  align-items: center;
+  font-family: "Courier New", sans-serif;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.logo {
+
+  display: flex;
+  align-items: center;
+}
+
+.logoImage {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+
+
+}
+
+.logoText {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.nav {
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+
+  .navList {
+    display: flex;
+  }
+
+  .navItem {
+    margin-left: 20px;
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: #575757;
+      border-radius: 5px;
+    }
+  }
+}
+.hamburger {
+  display: none;
+  font-size: 2em;
+  cursor: pointer;
+  color: red;
+
+  @media (max-width: 768px) {
+    .header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .nav {
+      display: none;
+      width: 100%;
+
+      &.navOpen {
+        display: block;
+      }
+
+      ul {
+        flex-direction: column;
+      }
+
+      .navItem {
+        margin: 10px 0;
+      }
+    }
+  }
+
+  .hamburger {
+    display: block;
+  }
+}

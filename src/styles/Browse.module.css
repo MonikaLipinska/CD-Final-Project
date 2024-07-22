@@ -1,0 +1,14 @@
+.browse ul {
+  list-style: none;
+  padding: 0;
+}
+.browse ul li {
+  cursor: pointer;
+  margin: 10px 0;
+}
+.browse ul li ul {
+  list-style: none;
+  padding: 0 20px;
+}
+
+/*# sourceMappingURL=Browse.module.css.map */

@@ -1,4 +1,4 @@
-import "@/styles/Help.scss";
+import "@/styles/Help.module.scss";
 
 
 const Help = () => {
@@ -8,7 +8,6 @@ const Help = () => {
             <h2>Help</h2>
             <p>How can we help you ?</p>
         </div>
-
 
 
     );

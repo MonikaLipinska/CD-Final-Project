@@ -1,4 +1,4 @@
-import "@/styles/Browse.scss";
+import "@/styles/Browse.module.scss";
 
 const Browse = () => {
     return (
