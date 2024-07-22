@@ -22,6 +22,7 @@ const About = () => {
 
     return (
         <div className={styles.about}>
+            
             <h1>About the gallery</h1>
             <p>The gallery ......</p>
             <div className={styles.carousel}>

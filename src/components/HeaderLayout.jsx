@@ -10,11 +10,10 @@ const HeaderLayout = () => {
 
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
     };
-    
+
     return (
         <>
             <header className={styles.header}>
@@ -24,7 +23,7 @@ const HeaderLayout = () => {
                 </div>
                 <nav className={styles.nav}>
                     <ul className={styles.navList}>
-                        <li><a href="#" className={styles.navItem}>Home</a></li>
+                        <li><NavLink to="/" className={styles.navItem}>Home</NavLink></li>
                         <li>
                             <NavLink to="/about" className={styles.navItem}>About</NavLink>
                             {/*<a href="#" className={styles.navItem}>About</a>*/}

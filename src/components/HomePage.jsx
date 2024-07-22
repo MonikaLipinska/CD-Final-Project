@@ -1,17 +1,11 @@
 import styles from "@/styles/HomePage.module.scss";
 import obrazek6 from "@/photo/obraz6.jpg"
-import {useState} from "react";
 import HeaderLayout from "@/components/HeaderLayout.jsx";
 
 
 const HomePage = () => {
 
-    const [isOpen, setIsOpen] = useState(false);
-    const [showHamburger, setShowHamburger] = useState(false);
 
-    const toggleMenu = () => {
-        setIsOpen(!isOpen);
-    };
     return (
         <div className={styles.container}>
             <header className={HeaderLayout}>
