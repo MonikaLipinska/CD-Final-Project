@@ -1,3 +1,11 @@
+#root {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -60,8 +68,6 @@
   font-size: 2em;
   cursor: pointer;
   color: red;
-  width: 15px;
-  height: 15px;
 }
 
 .section {
@@ -86,6 +92,7 @@
   text-align: center;
   padding: 1rem;
   width: 100%;
+  height: 200px;
   box-sizing: border-box;
 }
 
@@ -114,27 +121,5 @@
     text-align: center;
   }
 }
-.hamburger {
-  display: block;
-}
-
-/*.home {
-  img  {
-    height: auto;
-    width: 100%;
-  }
-
-  h1 {
-    position: absolute;
-    top: 50%;
-left: 50%;
-    color: white;
-    transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
-    padding: 20px;
-  }
-}
-*/
 
 /*# sourceMappingURL=HomePage.module.css.map */

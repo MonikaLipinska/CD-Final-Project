@@ -1,6 +1,8 @@
 import "@/styles/Browse.module.scss";
 
 const Browse = () => {
+
+
     return (
         <div className="browse">
             <h2>Browse</h2>
