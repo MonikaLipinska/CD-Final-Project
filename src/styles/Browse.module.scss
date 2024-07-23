@@ -1,11 +1,29 @@
 .browse {
   padding: 20px;
-  font-family: Arial, sans-serif;
+  font-family: "Courier New", sans-serif;
+
+  .imageRow {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    img {
+      width: 24%;
+      height: auto;
+      max-width: 100%;
+      box-sizing: border-box;
+      flex: 1 1 calc(25% - 10px);
+    }
+  }
 }
 
 .menuContainer {
   display: flex;
+  flex-wrap: wrap;
+  gap:10px;
 }
+
 
 .menu {
   list-style-type: none;
@@ -17,13 +35,19 @@
 }
 
 .menuItem {
+
   position: relative;
+
   margin: 10px 0;
   cursor: pointer;
-  padding: 10px;
+  padding: 20px;
   background-color: #e0e0e0;
   border-radius: 20px;
   margin-top: 30px;
+  flex: 1 1 calc(25% - 10px);
+  box-sizing: border-box;
+  text-align: center;
+
 
   &:hover .submenu {
     display: block;
@@ -76,4 +100,11 @@
   width: 150px;
   height: 150px;
   background-color: #ccc;
+}
+
+@media (max-width: 768px) {
+  .imageRow img,
+  .menuItem {
+    flex: 1 1 100%;
+  }
 }

@@ -18,11 +18,11 @@ const About = () => {
     const prevSlide = () => {
         setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
     };
-
+    
 
     return (
         <div className={styles.about}>
-            
+
             <h1>About the gallery</h1>
             <p>The gallery ......</p>
             <div className={styles.carousel}>

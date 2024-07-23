@@ -1,5 +1,9 @@
 import {NavLink, Outlet, Route, Routes, useParams} from "react-router-dom";
-import styles from "@/styles/Browse.module.scss"
+import styles from "@/styles/Browse.module.scss";
+import obrazek1 from "@/photo/obraz4.jpg";
+import obrazek2 from "@/photo/obraz2.jpg";
+import obrazek3 from "@/photo/obraz3.jpg";
+
 
 const Browse = () => {
 
@@ -24,10 +28,17 @@ const Browse = () => {
         return <div>Favorites {id}</div>;
     };
 
+
     return (
         <>
             <div className={styles.browse}>
                 <h2>Browse</h2>
+                <div className={styles.imageRow}>
+                    <img src={obrazek1} alt="Obrazek 1"/>
+                    <img src={obrazek2} alt="Obrazek 2"/>
+                    <img src={obrazek3} alt="Obrazek 3"/>
+
+                </div>
                 <div className={styles.menuContainer}>
                     <ul className={styles.menu}>
                         <li className={styles.menuItem}>Artist
