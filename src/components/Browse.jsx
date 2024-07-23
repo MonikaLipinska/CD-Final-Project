@@ -1,44 +1,80 @@
-import "@/styles/Browse.module.scss";
+import {NavLink, Outlet, Route, Routes, useParams} from "react-router-dom";
+import styles from "@/styles/Browse.module.scss"
 
 const Browse = () => {
 
 
+    const ArtistPage = () => {
+        const {id} = {useParams}();
+        return <div>Artist {id}</div>
+    };
+
+    const WorkPage = () => {
+        const {id} = useParams();
+        return <div>Work {id}</div>;
+    };
+
+    const CategoryPage = () => {
+        const {type} = useParams();
+        return <div>Category {type}</div>;
+    };
+
+    const FavoritesPage = () => {
+        const {id} = useParams();
+        return <div>Favorites {id}</div>;
+    };
+
     return (
-        <div className="browse">
-            <h2>Browse</h2>
-            <ul>
-                <li>Artist
-                    <ul>
-                        <li>Artist 1</li>
-                        <li>Artist 2</li>
-                        <li>Artist 3</li>
+        <>
+            <div className={styles.browse}>
+                <h2>Browse</h2>
+                <div className={styles.menuContainer}>
+                    <ul className={styles.menu}>
+                        <li className={styles.menuItem}>Artist
+                            <ul className={styles.submenu}>
+                                <li><NavLink to="/artist/1">Artist 1</NavLink></li>
+                                <li><NavLink to="/artist/2">Artist 2</NavLink></li>
+                                <li><NavLink to="/artist/3">Artist 3</NavLink></li>
+                            </ul>
+                        </li>
+                        <li className={styles.menuItem}>Work
+                            <ul className={styles.submenu}>
+                                <li><NavLink to="/work/1">Work 1</NavLink></li>
+                                <li><NavLink to="/work/2">Work 2</NavLink></li>
+                                <li><NavLink to="/work/3">Work 3</NavLink></li>
+                            </ul>
+                        </li>
+                        <li className={styles.menuItem}>Category
+                            <ul className={styles.submenu}>
+                                <li><NavLink to="/category/paintings">Paintings</NavLink></li>
+                                <li><NavLink to="/category/graphics">Graphics</NavLink></li>
+                                <li><NavLink to="/category/photos">Photos</NavLink></li>
+                            </ul>
+                        </li>
+                        <li className={styles.menuItem}>Favorites
+                            <ul className={styles.submenu}>
+                                <li><NavLink to="/favorites/1">Favorite 1</NavLink></li>
+                                <li><NavLink to="/favorites/2">Favorite 2</NavLink></li>
+                                <li><NavLink to="/favorites/3">Favorite 3</NavLink></li>
+                            </ul>
+                        </li>
                     </ul>
-                </li>
-                <li>Work
-                    <ul>
-                        <li>Work 1</li>
-                        <li>Work 2</li>
-                        <li>Work 3</li>
-                    </ul>
-                </li>
-                <li>Category
-                    <ul>
-                        <li>Paintings</li>
-                        <li>Graphics</li>
-                        <li>Photos</li>
-                    </ul>
-                </li>
-                <li>Favorites
-                    <ul>
-                        <li>Favorite 1</li>
-                        <li>Favorite 2</li>
-                        <li>Favorite 3</li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
+
+                </div>
+            </div>
+
+
+            <Routes>
+                <Route path="/artist/:id" component={ArtistPage}/>;
+                <Route path="/work/:id" component={WorkPage}/>;
+                <Route path="/category/:type" component={CategoryPage}/>;
+                <Route path="/favorites/:id" component={FavoritesPage}/>;
+            </Routes>
+            <Outlet/>
+        </>
     );
 };
+
 
 export default Browse;
 

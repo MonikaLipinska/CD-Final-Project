@@ -4,9 +4,10 @@ import Middleware from "@/components/Middleware.jsx";
 import HomePage from '@/components/HomePage.jsx';
 import HeaderLayout from "@/components/HeaderLayout.jsx"
 //import {Outlet} from "react-router-dom";
-import Browse from '@/components/Browse.jsx';
+import Browse from "@/components/Browse.jsx";
 import About from "@/components/About.jsx";
 import Contact from '@/components/Contact.jsx';
+import Help from "@/components/Help.jsx";
 // import Login from './components/Login.jsx';
 // import SignUp from "./components/SignUp.jsx";
 // import { supabase } from './supabase.js';
@@ -52,7 +53,7 @@ function App() {
                         <Route path="/about" element={<About/>}/>
                         <Route path="/browse" element={<Browse/>}/>
                         <Route path="/contact" element={<Contact/>}/>
-                        { /*                /!*<Route path="/help" element={<Help />} />*!/*/}
+                        <Route path="/help" element={<Help/>}/>
                     </Route>
                 </Route>
 

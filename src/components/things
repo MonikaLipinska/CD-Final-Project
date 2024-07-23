@@ -1,0 +1,3 @@
+{/*<div className={styles.images}>*/}
+                        {/* opcjonalnie obrazy */}
+                    {/*</div>*/}

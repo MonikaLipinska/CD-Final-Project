@@ -21,7 +21,7 @@ const HeaderLayout = () => {
                     <img src={obrazek6} alt="Art Gallery Logo" className={styles.logoImage}/>
                     <span className={styles.logoText}>Gallery name</span>
                 </div>
-                <nav className={`${styles.nav} ${isMenuOpen ? styles.open : ''}'}>`
+                <nav className={`${styles.nav} ${isMenuOpen ? styles.open : ''}`}>
                     <ul className={styles.navList}>
                         <li><NavLink to="/" className={styles.navItem}>Home</NavLink></li>
                         <li>
