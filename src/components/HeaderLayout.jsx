@@ -10,9 +10,18 @@ const HeaderLayout = () => {
 
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-    const toggleMenu = () => {
-        setIsMenuOpen(!isMenuOpen);
+
+    const handleMouseEnter = () => {
+        setIsMenuOpen(true);
     };
+
+    const handleMouseLeave = () => {
+        setIsMenuOpen(false);
+    };
+
+    // const toggleMenu = () => {
+    //   setIsMenuOpen(!isMenuOpen);
+    // };
 
     return (
         <>
@@ -33,7 +42,7 @@ const HeaderLayout = () => {
                         <li><NavLink to="/help" className={styles.navItem}>Help</NavLink></li>
                     </ul>
                 </nav>
-                <div className={styles.hamburger} onClick={toggleMenu}>
+                <div className={styles.hamburger} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
                     &#9776;
                 </div>
             </header>

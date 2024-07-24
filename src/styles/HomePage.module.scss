@@ -80,10 +80,20 @@
   font-size: 2em;
   cursor: pointer;
   color: red;
-
-
+}
+  .hamburger:hover + .nav,
+  .nav:hover {
+    display: block;
 }
 
+
+.nav {
+  display: none;
+}
+
+.nav.open {
+  display: block;
+}
 
 .section {
   box-sizing: border-box;
@@ -119,7 +129,7 @@
 }
 
 .socialIcons {
-  margin-top: 1 rem;
+  margin-top: 1rem;
 
 
   a {
