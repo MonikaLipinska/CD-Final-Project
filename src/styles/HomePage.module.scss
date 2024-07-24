@@ -118,6 +118,27 @@
   margin: 0;
 }
 
+.socialIcons {
+  margin-top: 1 rem;
+
+
+  a {
+    margin: 0 10px;
+    display: inline-block;
+
+    img {
+      width: 24px;
+      height: 24px;
+      color: red;
+
+    }
+  }
+
+  }
+
+
+
+
 @media (max-width: 768px) {
 
   .nav {
@@ -131,7 +152,7 @@
     width: 120px;
   }
 
-  .hamburger:hover .nav{
+  .hamburger:hover .nav {
     display: flex;
   }
 

@@ -1,6 +1,9 @@
 import styles from "@/styles/HomePage.module.scss";
 import obrazek6 from "@/photo/obraz6.jpg"
 import HeaderLayout from "@/components/HeaderLayout.jsx";
+import twitterIcon from "@/photo/twittericon.png";
+import instagramIcon from "@/photo/instagramicon.png";
+import facebookIcon from "@/photo/fbicon.png";
 
 
 const HomePage = () => {
@@ -46,6 +49,19 @@ const HomePage = () => {
                 <p>zip code</p>
                 <p>Warsaw</p>
                 <br/>
+
+                <div className={styles.socialIcons}>
+                    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+                        <img src={twitterIcon} alt="Twitter"/>
+                    </a>
+                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+                        <img src={facebookIcon} alt="Facebook"/>
+                    </a>
+                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+                        <img src={instagramIcon} alt="Instagram"/>
+                    </a>
+                </div>
+
             </footer>
 
         </div>

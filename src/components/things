@@ -1,3 +1,27 @@
 {/*<div className={styles.images}>*/}
                         {/* opcjonalnie obrazy */}
                     {/*</div>*/}
+
+
+
+                    formularz
+
+                    Wysyłanie zapytania: W funkcji handleSubmit możesz dodać kod do wysyłania zapytania do serwera, np. za pomocą fetch:
+
+                    const handleSubmit = (e) => {
+                      e.preventDefault();
+                      fetch('https://example.com/api/contact', {
+                        method: 'POST',
+                        headers: {
+                          'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(formData)
+                      })
+                      .then(response => response.json())
+                      .then(data => {
+                        console.log('Success:', data);
+                      })
+                      .catch((error) => {
+                        console.error('Error:', error);
+                      });
+                    };

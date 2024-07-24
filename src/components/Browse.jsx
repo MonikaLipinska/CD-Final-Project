@@ -6,10 +6,8 @@ import obrazek3 from "@/photo/obraz3.jpg";
 
 
 const Browse = () => {
-
-
     const ArtistPage = () => {
-        const {id} = {useParams}();
+        const {id} = useParams();
         return <div>Artist {id}</div>
     };
 
@@ -70,11 +68,18 @@ const Browse = () => {
                             </ul>
                         </li>
                     </ul>
-
                 </div>
             </div>
 
-
+            <footer className={styles.footer}>
+                <br>
+                </br>
+                <p>Gallery</p>
+                <p>Example street 7</p>
+                <p>zip code</p>
+                <p>Warsaw</p>
+                <br/>
+            </footer>
             <Routes>
                 <Route path="/artist/:id" component={ArtistPage}/>;
                 <Route path="/work/:id" component={WorkPage}/>;
