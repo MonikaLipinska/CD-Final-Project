@@ -2,8 +2,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  width: 100%;
-  height: 100%;
 }
 
 .container {
@@ -73,10 +71,6 @@
 .hamburger:hover + .nav,
 .nav:hover {
   display: block;
-}
-
-.nav {
-  display: none;
 }
 
 .nav.open {
