@@ -1,6 +1,11 @@
 .help {
   padding: 50px;
   font-family: "Courier New", sans-serif;
+  font-size: 20px;
+}
+
+.h2 {
+  font-size: 1.5rem;
 }
 
 .help h2,
@@ -29,6 +34,9 @@
   margin-bottom: 1rem;
   font-size: 1.5rem;
   color: #333333;
+}
+.helpForm .helpForm p {
+  font-weight: bold;
 }
 .helpForm .formGroup {
   margin-bottom: 1rem;

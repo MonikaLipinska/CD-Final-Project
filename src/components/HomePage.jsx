@@ -45,7 +45,7 @@ const HomePage = () => {
                 <br>
                 </br>
                 <p>Gallery</p>
-                <p>Example street 7</p>
+                <p>Example Street 7</p>
                 <p>zip code</p>
                 <p>Warsaw</p>
                 <br/>

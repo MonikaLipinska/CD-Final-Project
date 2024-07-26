@@ -33,7 +33,7 @@ const Help = () => {
 
                 <div className={styles.helpFormContainer}>
                     <form className={styles.helpForm} onSubmit={handleSubmit}>
-                        <h2>Help request form</h2>
+                        <p>Help request form</p>
                         <div className={styles.formGroup}>
                             <label>Name:<input type="text" name="name" value={formData.name} onChange={handleChange}
                                                required/>

@@ -29,17 +29,17 @@ const Contact = () => {
         return (
             <div className={styles.contact}>
                 <h2>Contact Us</h2>
-                <p>Example Str 7</p>
+                <p>Example Str. 7</p>
                 <p>zip code</p>
                 <p>Warsaw</p>
                 <br>
                 </br>
-                
+
                 <p>phone: 111 111 111</p>
                 <p>e-mail:example@gmail.com</p>
                 <div className={styles.contactFormContainer}>
                     <form className={styles.contactForm} onSubmit={handleSubmit}>
-                        <h2>Contact form</h2>
+                        <p>Contact form</p>
                         <div className={styles.formGroup}>
                             <label>Name:<input type="text" name="name" value={formData.name} onChange={handleChange}
                                                required/>
