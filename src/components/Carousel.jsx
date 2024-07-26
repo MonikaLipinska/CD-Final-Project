@@ -1,6 +1,6 @@
 import {useEffect, useState} from 'react';
 import styles from "@/styles/About.module.scss";
-import obrazek1 from "@/photo/obraz1.jpg";
+import obrazek12 from "@/photo/obraz12.png";
 import obrazek2 from "@/photo/obraz2.jpg";
 import obrazek3 from "@/photo/obraz3.jpg";
 import obrazek4 from "@/photo/obraz4.jpg";
@@ -10,7 +10,7 @@ import obrazek9 from "@/photo/obraz9.jpeg";
 
 const Carousel = () => {
     const images = [
-        obrazek1, obrazek2, obrazek3, obrazek4, obrazek8, obrazek9
+        obrazek12, obrazek2, obrazek3, obrazek4, obrazek8, obrazek9
     ];
     const [currentIndex, setCurrentIndex] = useState(0);
 

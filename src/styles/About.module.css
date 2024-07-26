@@ -3,14 +3,17 @@
 }
 .about h1 {
   font-family: "Courier New", sans-serif;
+  font-size: 30px;
+  text-align: center;
 }
 .about p {
   padding: 20px;
   font-family: "Courier New";
+  text-align: center;
 }
 
 .carouselContainer {
-  width: 80%;
+  width: 50%;
   margin: auto;
 }
 .carouselContainer .carouselSlide {
@@ -28,7 +31,7 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: red;
+  background: dimgray;
   color: white;
   border: none;
   padding: 10px;
@@ -40,10 +43,10 @@
 .carouselContainer .carouselButton:hover {
   opacity: 1;
 }
-.carouselContainer.prev {
+.carouselContainer .carouselButton.prev {
   left: 10px;
 }
-.carouselContainer.next {
+.carouselContainer .carouselButton.next {
   right: 10px;
 }
 @media (max-width: 768px) {

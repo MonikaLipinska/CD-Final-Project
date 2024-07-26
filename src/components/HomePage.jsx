@@ -1,5 +1,5 @@
 import styles from "@/styles/HomePage.module.scss";
-import obrazek6 from "@/photo/obraz6.jpg"
+import obrazek0 from "@/photo/obraz0.jpeg";
 import HeaderLayout from "@/components/HeaderLayout.jsx";
 import twitterIcon from "@/photo/twittericon.png";
 import instagramIcon from "@/photo/instagramicon.png";
@@ -37,7 +37,7 @@ const HomePage = () => {
             </header>
 
             <section className={styles.section}>
-                <img src={obrazek6} alt="Art Gallery 5" className={styles.logoImage2}/>
+                <img src={obrazek0} alt="Art Gallery" className={styles.logoImage2}/>
 
             </section>
 

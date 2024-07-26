@@ -3,6 +3,7 @@
   font-family: "Courier New", sans-serif;
   text-align: center;
 
+
   .imageRow {
     display: flex;
     flex-wrap: wrap;
@@ -18,6 +19,10 @@
       flex: 1 1 calc(25% - 10px);
     }
   }
+}
+
+.browse h2 {
+  font-size: 30px;
 }
 
 .menuContainer {
@@ -115,11 +120,15 @@
   padding: 1rem;
   width: 100%;
   height: 200px;
-  box-sizing: border-box;
+  box-sizing: content-box;
+
 }
 
 .footer p {
   margin: 0;
+  text-align: center;
+  margin-right: 70px;
+
 }
 
 @media (max-width: 768px) {
