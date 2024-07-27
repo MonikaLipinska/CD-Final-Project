@@ -1,4 +1,4 @@
-.signup {
+.login {
   display: flex;
   height: 100vh;
   background: #f0f0f0;
@@ -36,4 +36,4 @@ button:hover {
   background: #555;
 }
 
-/*# sourceMappingURL=SignUp.css.map */
+/*# sourceMappingURL=Login.module.css.map */

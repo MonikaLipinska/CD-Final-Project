@@ -49,6 +49,7 @@
 }
 .nav .navList {
   display: flex;
+  gap: 5px;
 }
 .nav .navItem {
   margin-left: 20px;
@@ -72,10 +73,12 @@
 .hamburger:hover + .nav,
 .nav:hover {
   display: block;
+  border-radius: 8px;
 }
 
 .nav.open {
   display: block;
+  border-radius: 8px;
 }
 
 .section {

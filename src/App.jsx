@@ -1,5 +1,5 @@
-// import {useEffect, useState} from 'react';
-import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+import {useEffect, useState} from 'react';
+import {BrowserRouter as Router, Navigate, Route, Routes} from 'react-router-dom';
 import Middleware from "@/components/Middleware.jsx";
 import HomePage from '@/components/HomePage.jsx';
 import HeaderLayout from "@/components/HeaderLayout.jsx"
@@ -8,9 +8,8 @@ import Browse from "@/components/Browse.jsx";
 import About from "@/components/About.jsx";
 import Contact from '@/components/Contact.jsx';
 import Help from "@/components/Help.jsx";
-// import Login from './components/Login.jsx';
-// import SignUp from "./components/SignUp.jsx";
-// import { supabase } from './supabase.js';
+import SignUp from "@/components/SignUp.jsx";
+import Login from '@/components/Login.jsx';
 
 
 // czy jestes zalogowany
@@ -41,13 +40,35 @@ function App() {
 
     // const HeaderLayout = () => {
 
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+    useEffect(() => {
+        const user = supabase.auth.user();
+        setIsLoggedIn(!!user);
+
+        const {data: authListener} = supabase.auth.onAuthStateChange((event, session) => {
+            setIsLoggedIn(!!session?.user);
+        });
+
+        return () => {
+            authListener?.unsubscribe();
+        };
+    }, []);
+
+    const handleLogin = () => {
+        setIsLoggedIn(true);
+    };
+
+    const handleSignUp = () => {
+        setIsLoggedIn(true);
+    };
 
     return (
         <Router>
             <Routes>
-                <Route path="/login" element={<h1>Hello login page</h1>}/>
-                {/*<Route path="/signup" />*/}
-                <Route path="/" element={<Middleware/>}>
+                <Route path="/login" element={<Login onLogin={handleLogin}/>}/>
+                <Route path="/signup" element={<SignUp onSignUp={handleSignUp}/>}/>
+                <Route path="/" element={isLoggedIn ? <Middleware/> : <Navigate to="/login"/>}>
                     <Route element={<HeaderLayout/>}>
                         <Route index element={<HomePage/>}/>
                         <Route path="/about" element={<About/>}/>

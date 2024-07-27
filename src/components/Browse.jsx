@@ -8,7 +8,8 @@ import obrazek3 from "@/photo/obraz3.jpg";
 const Browse = () => {
     const ArtistPage = () => {
         const {id} = useParams();
-        return <div>Artist {id}</div>
+        return <div>Artist {id}</div>;
+
     };
 
     const WorkPage = () => {

@@ -1,33 +1,48 @@
 import {useState} from "react";
-import '@/styles/Login.scss';
+import '@/styles/Login.module.scss';
+import {useNavigate} from "react-router-dom";
+
 
 const Login = ({onLogin}) => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [error, setError] = useState("");
+    const navigate = useNavigate();
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        localStorage.setItem('user', email);
-        onLogin();
 
+        const {error} = await supabase.auth.signInWithPassword({email, password,});
+
+        if (error) {
+            setError(error.message);
+        } else {
+            onLogin();
+            navigate("/");
+        }
     };
 
     return (
-        <div className="login">
+        <div className={login}>
+            <h2>Login</h2>
+            {error && <p>{error}</p>}
             <form onSubmit={handleSubmit}>
-                <h2>Log In</h2>
-                <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email"
+                <input type={email} value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email"
                        required/>
-                <input type="password" value={password} onChange={(e) => setPassword(e.target.value)}
+                <input type={password} value={password} onChange={(e) => setPassword(e.target.value)}
                        placeholder="Password" required/>
-
-                <button type="submit">Log In</button>
-
+                <button type={submit}>Login</button>
             </form>
         </div>
-    );
 
+    );
 
 };
 
+
 export default Login;
+
+
+
+
+
