@@ -42,12 +42,12 @@ function App() {
     }, []);
 
     const handleLogin = async (email, password) => {
-        const {error} = await supabase.auth.signInWithPassword({email, password});
+        const {data, error} = await supabase.auth.signInWithPassword({email, password});
         if (error) {
             console.error("Login error:", error);
             return error.message;
         }
-        setSession(session);
+        setSession(data);
         return null;
     };
 

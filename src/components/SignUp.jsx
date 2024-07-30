@@ -10,10 +10,10 @@ const SignUp = ({handleSignUp}) => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const signUpError = await handleSignUp({email: email, password: password,});
+        const signUpError = await handleSignUp(email, password);
         if (signUpError) {
             setError(signUpError);
-            console.error("Sign up error", SignUpError);
+            console.error("Sign up error", signUpError);
         } else {
 
             navigate('/login');

@@ -10,7 +10,7 @@ const HomePage = () => {
 
     return (
         <div className={styles.container}>
-            <header className={HeaderLayout}>
+            <header>
             </header>
             {/* <div className={styles.logo}>
                     <img src={obrazek6} alt="Art Gallery Logo" className={styles.logoImage}/>

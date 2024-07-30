@@ -19,7 +19,9 @@ export const useAuth = () => {
             setSession(session);
         };
 
-        getSession();
+        (async () => {
+            await getSession();
+        })();
 
         const {data: authListener} = supabase.auth.onAuthStateChange((_event, session) => {
             console.log("useAuth session changed:", session);
