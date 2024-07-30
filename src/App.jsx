@@ -13,12 +13,6 @@ import {supabase} from "@/supabase.js";
 import Middleware from "@/components/Middleware.jsx";
 
 
-// czy jestes zalogowany
-// if (true) {
-//     return <Navigate to="/login" />
-// }
-
-
 function App() {
     const [session, setSession] = useState(null);
 
@@ -80,27 +74,6 @@ function App() {
         </Router>
     );
 }
-
-
-// return (
-//    <Router>
-//       <Routes>
-//          <Route path="/login" element={<Login onLogin={handleLogin}/>}/>
-//        <Route path="/signup" element={<SignUp onSignUp={handleSignUp}/>}/>
-//         <Route path="/" element={session ? <Middleware/> : <Navigate to="/login"/>}>
-//              <Route element={<HeaderLayout/>}>
-//                  <Route index element={<HomePage/>}/>
-//                  <Route path="/about" element={<About/>}/>
-//                 <Route path="/browse" element={<Browse/>}/>
-//                 <Route path="/contact" element={<Contact/>}/>
-//                <Route path="/help" element={<Help/>}/>
-//            </Route>
-//        </Route>
-//
-//   </Routes>
-//  </Router>
-// );
-//}
 
 
 export default App;

@@ -18,6 +18,3 @@ const Middleware = () => {
 
 export default Middleware;
 
-
-//return user ? <Outlet/> : <Navigate to="/login"/>;
-//import {useEffect, useState} from "react";
