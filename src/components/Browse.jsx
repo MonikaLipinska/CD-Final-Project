@@ -3,31 +3,17 @@ import styles from "@/styles/Browse.module.scss";
 import obrazek1 from "@/photo/obraz4.jpg";
 import obrazek2 from "@/photo/obraz2.jpg";
 import obrazek3 from "@/photo/obraz3.jpg";
+import ArtistPage from "@/components/ArtistPage.jsx";
+import WorkPage from "@/components/WorkPage.jsx";
+import CategoryPage from "@/components/CategoryPage.jsx";
 
+
+const FavoritesPage = () => {
+    const {id} = useParams();
+    return <div>Favorites {id}</div>;
+};
 
 const Browse = () => {
-    const ArtistPage = () => {
-        const {id} = useParams();
-        return <div>Artist {id}</div>;
-
-    };
-
-    const WorkPage = () => {
-        const {id} = useParams();
-        return <div>Work {id}</div>;
-    };
-
-    const CategoryPage = () => {
-        const {type} = useParams();
-        return <div>Category {type}</div>;
-    };
-
-    const FavoritesPage = () => {
-        const {id} = useParams();
-        return <div>Favorites {id}</div>;
-    };
-
-
     return (
         <>
             <div className={styles.browse}>
@@ -82,10 +68,10 @@ const Browse = () => {
                 <br/>
             </footer>
             <Routes>
-                <Route path="/artist/:id" component={ArtistPage}/>;
-                <Route path="/work/:id" component={WorkPage}/>;
-                <Route path="/category/:type" component={CategoryPage}/>;
-                <Route path="/favorites/:id" component={FavoritesPage}/>;
+                <Route path="/artist/:id" element={ArtistPage}/>;
+                <Route path="/work/:id" element={WorkPage}/>;
+                <Route path="/category/:type" element={CategoryPage}/>;
+                <Route path="/favorites/:id" element={FavoritesPage}/>;
             </Routes>
             <Outlet/>
         </>

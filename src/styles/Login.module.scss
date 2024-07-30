@@ -1,45 +1,58 @@
-.login {
+
+.loginContainer {
   display: flex;
-  height: 100vh;
-  background: #f0f0f0;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-}
+  justify-content: center;
+  height: 100vh;
+  background-color: dimgrey;
+
+  h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #333;
+  }
 
 
-form {
-background: white;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  .error {
+    color: red;
+    margin-bottom: 10px;
+  }
+
+  loginForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
 
 
+    input {
+      width: 220px;
+      padding: 0.5rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
 
-}
+    button {
+      width: 220px;
+      padding: 10px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
 
-input {
-  display: block;
-  margin: 10px 0;
-  padding: 10px;
-  width: 100%;
-  border: 2px solid #ccc;
-  border-radius: 5px;
-
-}
-
-
-button {
-  display: block;
-  padding: 10px;
-  width: 100%;
-  background: #333;
-  color: white;
-  cursor: pointer;
-  border: none;
-  border-radius: 5px;
-
-
-  &:hover {
-    background: #555;
+    button:hover {
+      background-color: #0056b3;
+    }
   }
 }
+
+

@@ -1,6 +1,5 @@
 import styles from "@/styles/HomePage.module.scss";
 import obrazek0 from "@/photo/obraz0.jpeg";
-import HeaderLayout from "@/components/HeaderLayout.jsx";
 import twitterIcon from "@/photo/twittericon.png";
 import instagramIcon from "@/photo/instagramicon.png";
 import facebookIcon from "@/photo/fbicon.png";
@@ -12,7 +11,8 @@ const HomePage = () => {
     return (
         <div className={styles.container}>
             <header className={HeaderLayout}>
-                {/* <div className={styles.logo}>
+            </header>
+            {/* <div className={styles.logo}>
                     <img src={obrazek6} alt="Art Gallery Logo" className={styles.logoImage}/>
                     <span className={styles.logoText}>Gallery name</span>
                 </div>
@@ -34,7 +34,7 @@ const HomePage = () => {
                         </li>
                     </ul>
                 </nav> */}
-            </header>
+
 
             <section className={styles.section}>
                 <img src={obrazek0} alt="Art Gallery" className={styles.logoImage2}/>
