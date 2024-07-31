@@ -4,46 +4,64 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background-color: dimgrey;
+  background-color: lightgrey;
+  text-align: center;
 }
 .loginContainer h2 {
   margin-bottom: 20px;
   font-size: 2rem;
-  color: #333;
+  color: black;
+}
+.loginContainer .loginImage {
+  width: 20%;
+  height: auto;
+  margin: 25px auto;
+  display: block;
 }
 .loginContainer .error {
   color: red;
   margin-bottom: 10px;
 }
-.loginContainer loginForm {
+.loginContainer .loginForm {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: white;
+  background: whitesmoke;
   padding: 2rem;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: 300px;
+  width: 250px;
+  /*input {
+    width: 220px;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }*/
 }
-.loginContainer loginForm input {
-  width: 220px;
-  padding: 0.5rem;
-  margin-bottom: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+.loginContainer .loginForm .label {
+  margin-top: 10px;
+  margin-bottom: 5px;
 }
-.loginContainer loginForm button {
+.loginContainer .loginForm input[type=email],
+.loginContainer .loginForm input[type=password] {
+  margin-bottom: 10px;
+  padding: 5px;
+  width: 60%;
+  max-width: 300px;
+}
+.loginContainer .loginForm button {
   width: 220px;
   padding: 10px;
-  background-color: #007bff;
+  background-color: grey;
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s;
 }
-.loginContainer loginForm button:hover {
-  background-color: #0056b3;
+.loginContainer .loginForm button:hover {
+  background-color: mediumseagreen;
 }
 
 /*# sourceMappingURL=Login.module.css.map */

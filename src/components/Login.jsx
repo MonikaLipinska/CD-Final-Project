@@ -2,6 +2,7 @@ import {useState} from "react";
 import {useNavigate} from "react-router-dom";
 import styles from '@/styles/Login.module.scss';
 import PropTypes from "prop-types";
+import Vermeer from "@/photo/Vermeer.jpg";
 
 const Login = ({handleLogin}) => {
     const [email, setEmail] = useState("");
@@ -25,6 +26,7 @@ const Login = ({handleLogin}) => {
     return (
         <div className={styles.loginContainer}>
             <h2>Login</h2>
+            <img src={Vermeer} alt="A girl with a pearl earring ai" className={styles.loginImage}/>
             {error && <p className={styles.error}>{error}</p>}
             <form className={styles.loginForm} onSubmit={handleSubmit}>
                 <label className={styles.label}>Email:</label>
