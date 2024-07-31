@@ -1,24 +1,28 @@
 import {useParams} from "react-router-dom";
 import styles from "@/styles/ArtistPage.module.scss";
 
+import monroe from "@/photo/monroe.jpeg";
+import AE2 from "@/photo/AE2.png";
+import dali from "@/photo/dali.jpeg";
+
 
 const artists = [
     {
         id: 1,
         name: "One",
-        image: "AE2",
+        image: AE2,
         description: "Opis/Description"
     },
     {
         id: 2,
         name: "Two",
-        image: "monroe",
+        image: monroe,
         description: "Opis/Description"
     },
     {
         id: 3,
         name: "Three",
-        image: "dali",
+        image: dali,
         description: "Opis/Description"
     }
 ];
