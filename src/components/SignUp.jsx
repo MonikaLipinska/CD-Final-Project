@@ -1,6 +1,7 @@
 import {useState} from 'react';
 import {useNavigate} from 'react-router-dom';
 import styles from '@/styles/SignUp.module.scss';
+import sign from "@/photo/sign.jpeg";
 
 const SignUp = ({handleSignUp}) => {
     const [email, setEmail] = useState("");
@@ -25,9 +26,10 @@ const SignUp = ({handleSignUp}) => {
         <>
             <div className={styles.signupContainer}>
                 <h2>Sign Up</h2>
+                <img src={sign} alt="sign" className={styles.signImage}/>
                 {error && <p className={styles.error}>{error}</p>}
 
-                <form onSubmit={handleSubmit}>
+                <form className={styles.signForm} onSubmit={handleSubmit}>
                     <label>Email:</label>
                     <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email"
                            required/>

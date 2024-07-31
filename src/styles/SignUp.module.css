@@ -4,27 +4,39 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background-color: dimgrey;
+  background-color: lightgrey;
+  text-align: center;
 }
 .signupContainer h2 {
-  margin-bottom: 20px;
+  margin-bottom: 5px;
+}
+.signupContainer .signImage {
+  width: 35%;
+  height: auto;
+  margin: 25px auto;
+  display: block;
 }
 .signupContainer .error {
   color: red;
   margin-bottom: 10px;
 }
-.signupContainer form {
+.signupContainer .signForm {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background: whitesmoke;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 250px;
 }
-.signupContainer form input {
+.signupContainer .signForm input {
   padding: 8px;
   margin-top: 5px;
   margin-bottom: 10px;
   width: 200px;
 }
-.signupContainer form button {
+.signupContainer .signForm button {
   padding: 10px;
   margin-top: 10px;
   width: 220px;
@@ -32,13 +44,13 @@
 .signupContainer button {
   margin-top: 20px;
   padding: 10px;
-  background-color: #007BFF;
+  background-color: grey;
   color: white;
   border: none;
   cursor: pointer;
 }
 .signupContainer button:hover {
-  background-color: #0056b3;
+  background-color: mediumseagreen;
 }
 
 /*.signup {

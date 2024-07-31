@@ -35,9 +35,9 @@ const Login = ({handleLogin}) => {
                 <label className={styles.label}>Password:</label>
                 <input type="password" value={password} onChange={(e) => setPassword(e.target.value)}
                        placeholder="Password" required/>
-                <button type="submit">Login</button>
+                <button className={styles.buttonLogin} type="submit">Login</button>
             </form>
-            <button onClick={() => navigate("/signup")}>or Sign Up</button>
+            <button className={styles.buttonSign} type="button" onClick={() => navigate("/signup")}>or Sign Up</button>
         </div>
 
     );

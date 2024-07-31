@@ -5,22 +5,36 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background-color: dimgrey;
+  background-color: lightgrey;
+  text-align: center;
 
   h2 {
-    margin-bottom: 20px;
+    margin-bottom: 5px;
   }
+
+  .signImage {
+
+    width: 35%;
+    height: auto;
+    margin: 25px auto;
+    display: block;
+  }
+
 
   .error {
     color: red;
     margin-bottom: 10px;
   }
 
-  form {
+  .signForm {
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    background: whitesmoke;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 250px;
 
 
     input {
@@ -40,19 +54,16 @@
   button {
     margin-top: 20px;
     padding: 10px;
-    background-color: #007BFF;
+    background-color: grey;
     color: white;
     border: none;
     cursor: pointer;
 
     &:hover {
-      background-color: #0056b3;
+      background-color: mediumseagreen;
     }
   }
 }
-
-
-
 
 
 /*.signup {
