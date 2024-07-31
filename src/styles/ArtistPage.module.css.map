@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":[],"names":[],"mappings":"","file":"ArtistPage.module.css"}
+{"version":3,"sourceRoot":"","sources":["ArtistPage.module.scss"],"names":[],"mappings":"AASA;EACE;EACA,kBATiB;EAUjB;EACA;EACA;EACA;EACA;;;AAIF;EACE,OArBc;EAsBd;EACA;;;AAIF;EACE;EACA;EACA;EACA;EACA;EACA;EACA;;;AAIF;EACE,OAtCgB;EAuChB;EACA;EACA;;;AAIF;EACE,kBA3CkB;EA4ClB,OA3Ca;EA4Cb;EACA;EACA;EACA;EACA;EACA;;AAEA;EACE,kBAnDsB","file":"ArtistPage.module.css"}

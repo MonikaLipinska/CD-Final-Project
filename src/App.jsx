@@ -11,6 +11,7 @@ import Login from "@/components/Login.jsx";
 import SignUp from "@/components/SignUp.jsx";
 import {supabase} from "@/supabase.js";
 import Middleware from "@/components/Middleware.jsx";
+import ArtistPage from "@/components/ArtistPage.jsx";
 
 
 function App() {
@@ -65,9 +66,10 @@ function App() {
                     <Route element={<HeaderLayout/>}>
                         <Route index element={<HomePage/>}/>
                         <Route path="/about" element={<About/>}/>
-                        <Route path="/browse" element={<Browse/>}/>
                         <Route path="/contact" element={<Contact/>}/>
                         <Route path="/help" element={<Help/>}/>
+                        <Route path="/browse/*" element={<Browse/>}/>
+                        <Route path="/artist/:id" element={<ArtistPage/>}/>
                     </Route>
                 </Route>
             </Routes>

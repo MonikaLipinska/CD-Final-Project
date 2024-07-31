@@ -60,6 +60,9 @@
   min-height: 100px;
 }
 .helpForm button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 10px;
   background-color: dimgrey;
   color: white;

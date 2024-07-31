@@ -23,9 +23,6 @@ const About = () => {
 
             <h1>About the gallery</h1>
             <p>The gallery has been established......</p>
-            <p></p>
-            <p></p>
-           
             <div><Carousel/></div>
             {/*<button onClick={prevSlide}>Previous</button>
                 <div className={styles.carouselWewn} style={{transform: `translateX(-${currentIndex * 100}%)`}}>

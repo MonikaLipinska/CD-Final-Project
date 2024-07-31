@@ -1,4 +1,4 @@
-import {NavLink, Outlet, Route, Routes, useParams} from "react-router-dom";
+import {Link, Outlet, Route, Routes} from "react-router-dom";
 import styles from "@/styles/Browse.module.scss";
 import obrazek1 from "@/photo/obraz4.jpg";
 import obrazek2 from "@/photo/obraz2.jpg";
@@ -8,11 +8,31 @@ import WorkPage from "@/components/WorkPage.jsx";
 import CategoryPage from "@/components/CategoryPage.jsx";
 
 
-const FavoritesPage = () => {
+{/*const FavoritesPage = () => {
     const {id} = useParams();
     return <div>Favorites {id}</div>;
-};
-
+};*/
+}
+const artists = [
+    {
+        id: 1,
+        name: "One",
+        image: "AE2",
+        description: "Opis/Description"
+    },
+    {
+        id: 2,
+        name: "Two",
+        image: "monroe",
+        description: "Opis/Description"
+    },
+    {
+        id: 3,
+        name: "Three",
+        image: "dali",
+        description: "Opis/Description"
+    }
+];
 const Browse = () => {
     return (
         <>
@@ -28,32 +48,39 @@ const Browse = () => {
                     <ul className={styles.menu}>
                         <li className={styles.menuItem}>Artist
                             <ul className={styles.submenu}>
-                                <li><NavLink to="/artist/1">Artist 1</NavLink></li>
-                                <li><NavLink to="/artist/2">Artist 2</NavLink></li>
-                                <li><NavLink to="/artist/3">Artist 3</NavLink></li>
+                                {artists.map((artist) => (
+                                    <li key={artist.id}>
+                                        <Link to={`/artist/${artist.id}`}>
+                                            {artist.name}
+                                        </Link>
+                                    </li>
+                                ))}
                             </ul>
                         </li>
+                        {/*<li><NavLink to="/artist/2">Artist 2</NavLink></li>
+                                <li><NavLink to="/artist/3">Artist 3</NavLink></li>*/}
+
                         <li className={styles.menuItem}>Work
                             <ul className={styles.submenu}>
-                                <li><NavLink to="/work/1">Work 1</NavLink></li>
-                                <li><NavLink to="/work/2">Work 2</NavLink></li>
-                                <li><NavLink to="/work/3">Work 3</NavLink></li>
+                                <li><Link to="/work/1">Work 1</Link></li>
+                                <li><Link to="/work/2">Work 2</Link></li>
+                                <li><Link to="/work/3">Work 3</Link></li>
                             </ul>
                         </li>
                         <li className={styles.menuItem}>Category
                             <ul className={styles.submenu}>
-                                <li><NavLink to="/category/paintings">Paintings</NavLink></li>
-                                <li><NavLink to="/category/graphics">Graphics</NavLink></li>
-                                <li><NavLink to="/category/photos">Photos</NavLink></li>
+                                <li><Link to="/category/paintings">Paintings</Link></li>
+                                <li><Link to="/category/graphics">Graphics</Link></li>
+                                <li><Link to="/category/photos">Photos</Link></li>
                             </ul>
                         </li>
-                        <li className={styles.menuItem}>Favorites
+                        {/*} <li className={styles.menuItem}>Favorites
                             <ul className={styles.submenu}>
                                 <li><NavLink to="/favorites/1">Favorite 1</NavLink></li>
                                 <li><NavLink to="/favorites/2">Favorite 2</NavLink></li>
                                 <li><NavLink to="/favorites/3">Favorite 3</NavLink></li>
                             </ul>
-                        </li>
+                        </li>*/}
                     </ul>
                 </div>
             </div>
@@ -68,16 +95,14 @@ const Browse = () => {
                 <br/>
             </footer>
             <Routes>
-                <Route path="/artist/:id" element={ArtistPage}/>;
-                <Route path="/work/:id" element={WorkPage}/>;
-                <Route path="/category/:type" element={CategoryPage}/>;
-                <Route path="/favorites/:id" element={FavoritesPage}/>;
+                <Route path="/artist/:id" element={<ArtistPage/>}/>;
+                <Route path="/work/:id" element={<WorkPage/>}/>;
+                <Route path="/category/:type" element={<CategoryPage/>}/>;
+
             </Routes>
             <Outlet/>
         </>
     );
 };
-
-
 export default Browse;
 
