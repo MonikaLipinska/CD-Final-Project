@@ -40,6 +40,7 @@
   justify-content: center;
   gap: 10px;
   margin-top: 20px;
+  flex-wrap: wrap;
 }
 
 .thumbnail {
@@ -48,6 +49,7 @@
   border-radius: 5px;
   transition: transform 0.3s ease;
   cursor: pointer;
+  margin-top: 30px;
 }
 .thumbnail:hover {
   transform: scale(3);

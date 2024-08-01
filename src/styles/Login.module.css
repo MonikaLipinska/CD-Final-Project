@@ -8,9 +8,10 @@
   text-align: center;
 }
 .loginContainer h2 {
-  margin-bottom: 20px;
+  margin-bottom: 0px;
   font-size: 2rem;
   color: black;
+  margin-top: -40px;
 }
 .loginContainer .loginImage {
   width: 20%;

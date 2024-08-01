@@ -1,16 +1,37 @@
-#root {
-  height: 100%;
+/*#root {
+  width: 100%;
+  height: auto;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 
 }
+*/
 
-.container {
+/*html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+*/
+#root {
   display: flex;
   flex-direction: column;
-  min-height: 100%;
+  height: 100vh;
+  width: 100vw;
+
+}
+
+
+.container {
+  /*box-sizing: border-box;*/
+  display: flex;
+  flex-direction: column;
+ /*min-height: 100%;*/
   font-family: "Courier New", sans-serif;
+  flex: 1;
 }
 
 //.homepage {}
@@ -82,16 +103,16 @@
   font-size: 2em;
   cursor: pointer;
   color: red;
-}
-  .hamburger:hover + .nav,
-  .nav:hover {
-    display: block;
-    border-radius: 8px;
-
 
 }
 
+.hamburger:hover + .nav,
+.nav:hover {
+  display: block;
+  border-radius: 8px;
 
+
+}
 
 
 .nav.open {
@@ -111,10 +132,12 @@
   padding: 2rem;
 
 
+
+
 }
 
 .logoImage2 {
-  max-width: 50%;
+  max-width: 55%;
   height: auto;
 }
 
@@ -126,7 +149,9 @@
   padding: 1rem;
   width: 100%;
   height: 200px;
-  box-sizing: content-box;
+  box-sizing: border-box;
+  font-family: "Courier New", sans-serif;
+
 }
 
 .footer p {
@@ -149,9 +174,7 @@
     }
   }
 
-  }
-
-
+}
 
 
 @media (max-width: 768px) {
@@ -159,12 +182,14 @@
   .nav {
     display: none;
     position: absolute;
-    top: 60px;
+    top: 50px;
     right: 20px;
     background-color: #333;
     border: 1px solid #ccc;
     flex-direction: column;
-    width: 120px;
+    width: 110px;
+    height: 120px;
+
   }
 
   .hamburger:hover .nav {
