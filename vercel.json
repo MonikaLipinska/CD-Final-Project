@@ -24,9 +24,14 @@
   ],
   "redirects": [
     {
-      "source": "/old-page",
-      "destination": "/new-page",
+      "source": "/old-path",
+      "destination": "/new-path",
       "statusCode": 301
+    },
+    {
+      "source": "/outdated-page",
+      "destination": "/updated-page",
+      "statusCode": 302
     }
   ],
   "headers": [
