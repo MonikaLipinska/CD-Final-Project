@@ -1,0 +1,48 @@
+
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "vite.config.js",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "dist"
+      }
+    }
+  ],
+      "routes": [
+        {
+          "src": "/old-page",
+          "dest": "/new-page",
+          "statusCode": 301
+        }
+      ],
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "/api/index.js"
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/old-page",
+      "destination": "/new-page",
+      "statusCode": 301
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "max-age=0, must-revalidate"
+        }
+      ]
+    }
+  ],
+  "env": {
+    "REACT_APP_SUPABASE_URL':'https://zshnlxqwrwkgftreivsh.supabase.co'
+    "REACT_APP_SUPABASE_KEY':'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InpzaG5seHF3cndrZ2Z0cmVpdnNoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjIwODA0NjUsImV4cCI6MjAzNzY1NjQ2NX0.ZMsqkrmscfw59SsQ_bpzJ7SvO5G6R0Uult3TQ9ahA_g'
+  }
+}
