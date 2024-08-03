@@ -30,14 +30,14 @@ const SignUp = ({handleSignUp}) => {
                 {error && <p className={styles.error}>{error}</p>}
 
                 <form className={styles.signForm} onSubmit={handleSubmit}>
-                    <label>Email:</label>
+                    <label className={styles.label}>Email:</label>
                     <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email"
                            required/>
-                    <label>Password:</label>
+                    <label className={styles.label}>Password:</label>
                     <input type="password" value={password} onChange={(e) => setPassword(e.target.value)}
                            placeholder="Password" required/>
 
-                    <button type="submit">Sign Up</button>
+                    <button className={styles.buttonSign} type="submit">Sign Up</button>
                 </form>
 
             </div>

@@ -1,4 +1,5 @@
 .signupContainer {
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -6,15 +7,17 @@
   height: 100vh;
   background-color: lightgrey;
   text-align: center;
+  padding: 0 10px;
 }
 .signupContainer h2 {
   margin-bottom: 5px;
 }
 .signupContainer .signImage {
-  width: 35%;
+  width: 20%;
   height: auto;
-  margin: 25px auto;
+  margin: 10px;
   display: block;
+  margin-top: 10px;
 }
 .signupContainer .error {
   color: red;
@@ -28,29 +31,47 @@
   padding: 2rem;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: 250px;
+  width: 50%;
+  max-width: 300px;
+  margin-bottom: 20px;
 }
-.signupContainer .signForm input {
-  padding: 8px;
-  margin-top: 5px;
-  margin-bottom: 10px;
-  width: 200px;
-}
-.signupContainer .signForm button {
-  padding: 10px;
+.signupContainer .signForm .label {
   margin-top: 10px;
-  width: 220px;
+  margin-bottom: 5px;
 }
-.signupContainer button {
+.signupContainer .signForm input[type=email],
+.signupContainer .signForm input[type=password] {
+  margin-bottom: 10px;
+  padding: 1px;
+  width: 60%;
+  max-width: 300px;
+}
+.signupContainer .signForm .buttonSign {
   margin-top: 20px;
-  padding: 10px;
+  width: 80%;
+  max-width: 200px;
+  padding: 15px;
   background-color: grey;
   color: white;
   border: none;
+  border-radius: 5px;
   cursor: pointer;
+  transition: background-color 0.3s;
 }
-.signupContainer button:hover {
-  background-color: mediumseagreen;
+.signupContainer .signForm .buttonSign:hover {
+  background-color: #218838;
+}
+@media (max-width: 768px) {
+  .signupContainer .signForm .buttonSign:hover .signForm {
+    width: 90%;
+    padding: 1rem;
+  }
+  .signupContainer .signForm .buttonSign:hover h2 {
+    font-size: 1.5rem;
+  }
+  .signupContainer .signForm .buttonSign:hover .buttonSign {
+    width: 100%;
+  }
 }
 
 /*.signup {
